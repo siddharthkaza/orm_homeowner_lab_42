@@ -20,7 +20,7 @@ class MainController < ApplicationController
     The following examples use a simple scenario/schema where there are homes
     that are owned by multiple owners and vice-versa
 
-    the following statements can be called from the browser (by calling the action) or bu other actions in the controller
+    the following statements can be called from the browser (by calling the action) or by other actions in the controller
     BUT PLEASE use the rails console (type in the statements) for this, see lab
     in either case you will need to have the DB open to see the changes
 =end
@@ -28,7 +28,7 @@ class MainController < ApplicationController
     ##############################################################
     #start of code for implicit relationship (uncomment if needed)
     #
-    #the statement below would work with an implicit relationship
+    #the statements below would work with an implicit relationship
     #i.e., using the homes_owners table that has no corresponding model
     #the statement will automatically create the appropriate link in the table
     #see page 288  (about has_and_belongs_to_many method) in book
@@ -39,8 +39,7 @@ class MainController < ApplicationController
     Owner.create(:first_name=>"john", :last_name=>"doe")
 
     h = Home.new(:number => "837", :street => "York Rd.", :city => "Towson", :state => "MD")
-    h.owners << Owner.find(1) #gets us the record with the id=1 and assigns it to
-    #as the owner of this home
+    h.owners << Owner.find(1) #gets us the record with the id=1 and assigns it as the owner of this home
 
     h.save #saves the record
 
