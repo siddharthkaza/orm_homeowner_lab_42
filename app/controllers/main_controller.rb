@@ -21,8 +21,8 @@ class MainController < ApplicationController
     that are owned by multiple owners and vice-versa
 
     the following statements can be called from the browser (by calling the action) or by other actions in the controller
-    BUT PLEASE use the rails console (type in the statements) for this, see lab
-    in either case you will need to have the DB open to see the changes
+    BUT PLEASE use the rails console (type in the statements) for this, see lab document.
+    You will need to have the DB open to see the changes
 =end
 
     ##############################################################
